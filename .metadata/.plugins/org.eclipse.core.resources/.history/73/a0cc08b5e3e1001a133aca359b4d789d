@@ -1,0 +1,17 @@
+package com.cos.jwtex01.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class JwtCreateController {
+	
+	@PostMapping("/oauth/jwt/google")
+	public String jwtCreate(@RequestBody String data) {
+		System.out.println("jwtCreate 실행됨");
+		System.out.println(data);
+		return "jwtToken created";
+	}
+	
+}
